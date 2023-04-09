@@ -1,11 +1,11 @@
-import CategoryCard from "../category-card/category-card.component";
-import "./directory.component.scss";
+import DirectoryCard from "../directory-card/directory-card.component";
+import style from "./directory.module.scss";
 
 const Directory = ({ categories }) => {
   return (
-    <div className="categories-container">
+    <div className={style.categoriesContainer}>
       {categories.map(({ id, title, imageUrl }) => (
-        <CategoryCard title={title} key={id} imageUrl={imageUrl} />
+        <DirectoryCard title={title} key={id} imageUrl={imageUrl} />
       ))}
     </div>
   );

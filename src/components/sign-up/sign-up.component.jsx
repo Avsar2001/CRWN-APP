@@ -2,7 +2,8 @@ import { useState } from "react";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.util";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
-import "./sign-up.styles.scss";
+
+import style from "./sign-up.module.scss";
 
 const defaultFormFields = {
   displayName: "",
@@ -38,7 +39,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <div className={style.signUpContainer}>
       <h2>Don't have an account?</h2>
       <span>Sign Up With Email and Password</span>
 

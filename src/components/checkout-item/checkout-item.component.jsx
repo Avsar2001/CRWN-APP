@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "./checkout-item.styles.scss";
+import style from "./checkout-item.module.scss";
 import { cartContext } from "../../contexts/cart.context";
 
 const CheckoutItem = (product) => {
@@ -13,22 +13,22 @@ const CheckoutItem = (product) => {
   const removeItemFromCart = () => removeProductFromCart(product);
 
   return (
-    <div className="checkout-item-container">
-      <div className="image-container">
+    <div className={style.checkoutItemContainer}>
+      <div className={style.imageContainer}>
         <img src={imageUrl} alt={`${name}`} />
       </div>
-      <span className="name">{name}</span>
-      <div className="quantity">
-        <span className="arrow" onClick={reduceItemInCart}>
+      <span className={style.name}>{name}</span>
+      <div className={style.quantity}>
+        <span className={style.arrow} onClick={reduceItemInCart}>
           &#10094;
         </span>
-        <span className="value">{count}</span>
-        <span className="arrow" onClick={addToCart}>
+        <span className={style.value}>{count}</span>
+        <span className={style.arrow} onClick={addToCart}>
           &#10095;
         </span>
       </div>
-      <span className="price">{price}</span>
-      <span className="remove-button" onClick={removeItemFromCart}>
+      <span className={style.price}>{price}</span>
+      <span className={style.removeButton} onClick={removeItemFromCart}>
         &#10005;
       </span>
     </div>
